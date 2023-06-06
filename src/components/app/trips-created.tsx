@@ -1,7 +1,7 @@
 import * as React from 'react'
 import type { HeadFC } from "gatsby"
-import Section from "../../context/Section"
-import Heading from "../../context/Heading"
+import Section from "../context/Section"
+import Heading from "../context/Heading"
 
 const Post: React.FC<{ title: string, body: string }> = ({ title, body }) => {
     return (

@@ -2,6 +2,7 @@ import * as React from 'react'
 import type { HeadFC } from "gatsby"
 import Section from "../context/Section"
 import Heading from "../context/Heading"
+import { getUser } from "../../services/auth"
 
 const Post: React.FC<{ title: string, body: string }> = ({ title, body }) => {
     return (
@@ -52,8 +53,8 @@ const ProfilePage: React.FC<{ path?: String }> = ({ path }) => {
     <>
       <h1>Your profile</h1>
       <ul>
-        <li>Name: Your name will appear here</li>
-        <li>E-mail: And here goes the mail</li>
+        <li>Name: {getUser().name}</li>
+        <li>E-mail: {getUser().email}</li>
       </ul>
     </>
   )

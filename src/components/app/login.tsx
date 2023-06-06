@@ -2,7 +2,6 @@ import React from "react"
 import { useState } from "react"
 import { navigate } from "gatsby"
 import { handleLogin, isLoggedIn } from "../../services/auth"
-import { EventEmitter } from "stream"
 
 const Login: React.FC<{ path?: String }> = () => {
     const [username, setUsername] = useState("")
