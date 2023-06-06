@@ -7,6 +7,7 @@ const Header: React.FC = () => {
             <ul className="list-none flex gap-1">
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/heading-context">Heading Context</Link></li>
+                <li><Link to="/profile">Profile</Link></li>
             </ul>
         </header>
     )
