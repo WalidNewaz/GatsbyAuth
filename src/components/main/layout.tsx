@@ -1,22 +1,22 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
-import Header from "./header"
+import NavBar from "./nav-bar"
 
 declare let __PATH_PREFIX__: string
 
 type LayoutProps = {
-    location: Location
-    children: React.ReactNode
+    location?: Location
+    children?: React.ReactNode
 }
 
 const Layout: React.FC<LayoutProps> = ({ location, children }) => {
 
     const rootPath = `${__PATH_PREFIX__}/`
-    const isRootPath = location.pathname === rootPath
+    // const isRootPath = location.pathname === rootPath
 
     return (
-        <div data-is-root-path={isRootPath}>
-            <Header />
+        <div>
+            <NavBar />
             <main>
                 {children}
             </main>

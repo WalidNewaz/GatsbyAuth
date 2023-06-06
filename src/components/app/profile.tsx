@@ -1,7 +1,7 @@
 import * as React from 'react'
-import type { HeadFC, PageProps } from "gatsby"
-import Section from "../components/context/Section"
-import Heading from "../components/context/Heading"
+import type { HeadFC } from "gatsby"
+import Section from "../context/Section"
+import Heading from "../context/Heading"
 
 const Post: React.FC<{ title: string, body: string }> = ({ title, body }) => {
     return (
@@ -39,17 +39,24 @@ const AllPosts: React.FC = () => {
       )
 }
 
-const ProfilePage: React.FC = () => {
-    return (
-        <Section>
-          <Heading>My Profile</Heading>
-          <Post
-            title="Hello traveller!"
-            body="Read about my adventures."
-          />
-          <AllPosts />
-        </Section>
-      )
+const ProfilePage: React.FC<{ path?: String }> = ({ path }) => {
+  return (
+    // <Section>
+    //   <Heading>My Profile</Heading>
+    //   <Post
+    //     title="Hello traveller!"
+    //     body="Read about my adventures."
+    //   />
+    //   <AllPosts />
+    // </Section>
+    <>
+      <h1>Your profile</h1>
+      <ul>
+        <li>Name: Your name will appear here</li>
+        <li>E-mail: And here goes the mail</li>
+      </ul>
+    </>
+  )
 }
 
 export default ProfilePage
